@@ -1,0 +1,36 @@
+name: manage-azure-policy-aaace607
+on:
+  workflow_dispatch:
+    inputs:
+      remarks:
+        description: 'Reason for triggering the workflow run'
+        required: false
+        default: 'Updating Azure Policies'
+
+
+## Uncomment the following if you wish to automatically trigger workflow run with every commit
+#
+#  push:
+#    paths:
+#      - 'C:\Users\jhartma\myproject\.git\azure policies/policies/Audit_virtual_machines_without_disaster_recovery_configured_0015ea4d-51ff-4ce3-8d8c-f3f8f0179a56/**'
+#      - 'C:\Users\jhartma\myproject\.git\azure policies/policies/Vulnerability_assessment_should_be_enabled_on_your_Synapse_workspaces_0049a6b3-a662-4f3e-8635-39cf44ace45a/**'
+#      - 'C:\Users\jhartma\myproject\.git\azure policies/initiatives/PCI_v3.2.1_2018_496eeda9-8f2f-4d5e-8dfd-204f0a92ed41/**'
+#      - .github/workflows/manage-azure-policy-aaace607.yml
+jobs:
+  apply-azure-policy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Login to Azure
+      uses: azure/login@v1
+      with:
+        creds: ${{secrets.AZURE_CREDENTIALS_aaace607}}
+        allow-no-subscriptions: true
+    - name: Create or Update Azure Policies
+      uses: azure/manage-azure-policy@v0
+      with:
+        paths: |
+          C:\Users\jhartma\myproject\.git\azure policies/policies/Audit_virtual_machines_without_disaster_recovery_configured_0015ea4d-51ff-4ce3-8d8c-f3f8f0179a56/**
+          C:\Users\jhartma\myproject\.git\azure policies/policies/Vulnerability_assessment_should_be_enabled_on_your_Synapse_workspaces_0049a6b3-a662-4f3e-8635-39cf44ace45a/**
+          C:\Users\jhartma\myproject\.git\azure policies/initiatives/PCI_v3.2.1_2018_496eeda9-8f2f-4d5e-8dfd-204f0a92ed41/**
