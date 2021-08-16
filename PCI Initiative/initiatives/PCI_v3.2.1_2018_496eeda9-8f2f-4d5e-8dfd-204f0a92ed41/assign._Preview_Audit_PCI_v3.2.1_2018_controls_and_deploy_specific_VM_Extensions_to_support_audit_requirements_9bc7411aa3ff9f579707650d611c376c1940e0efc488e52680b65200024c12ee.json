@@ -1,0 +1,81 @@
+{
+ "sku": {
+  "name": "A1",
+  "tier": "Standard"
+ },
+ "identity": {
+  "principalId": "def239c1-69f2-477c-82a1-706af71d9d4c",
+  "tenantId": "1a0105b6-f4af-42cf-895d-25550fe6bd5a",
+  "type": "SystemAssigned"
+ },
+ "properties": {
+  "displayName": "[Preview]: Audit PCI v3.2.1:2018 controls and deploy specific VM Extensions to support audit requirements",
+  "policyDefinitionId": "/providers/Microsoft.Authorization/policySetDefinitions/496eeda9-8f2f-4d5e-8dfd-204f0a92ed41",
+  "scope": "/subscriptions/a5d987dd-b7cd-48c7-9390-25322651febd",
+  "notScopes": [],
+  "parameters": {
+   "listOfResourceTypesWithDiagnosticLogsEnabled": {
+    "value": [
+     "Microsoft.AnalysisServices/servers",
+     "Microsoft.ApiManagement/service",
+     "Microsoft.Network/applicationGateways",
+     "Microsoft.Automation/automationAccounts",
+     "Microsoft.ContainerInstance/containerGroups",
+     "Microsoft.ContainerRegistry/registries",
+     "Microsoft.ContainerService/managedClusters",
+     "Microsoft.Batch/batchAccounts",
+     "Microsoft.Cdn/profiles/endpoints",
+     "Microsoft.CognitiveServices/accounts",
+     "Microsoft.DocumentDB/databaseAccounts",
+     "Microsoft.DataFactory/factories",
+     "Microsoft.DataLakeAnalytics/accounts",
+     "Microsoft.DataLakeStore/accounts",
+     "Microsoft.EventGrid/eventSubscriptions",
+     "Microsoft.EventGrid/topics",
+     "Microsoft.EventHub/namespaces",
+     "Microsoft.Network/expressRouteCircuits",
+     "Microsoft.Network/azureFirewalls",
+     "Microsoft.HDInsight/clusters",
+     "Microsoft.Devices/IotHubs",
+     "Microsoft.KeyVault/vaults",
+     "Microsoft.Network/loadBalancers",
+     "Microsoft.Logic/integrationAccounts",
+     "Microsoft.Logic/workflows",
+     "Microsoft.DBforMySQL/servers",
+     "Microsoft.Network/networkInterfaces",
+     "Microsoft.Network/networkSecurityGroups",
+     "Microsoft.DBforPostgreSQL/servers",
+     "Microsoft.PowerBIDedicated/capacities",
+     "Microsoft.Network/publicIPAddresses",
+     "Microsoft.RecoveryServices/vaults",
+     "Microsoft.Cache/redis",
+     "Microsoft.Relay/namespaces",
+     "Microsoft.Search/searchServices",
+     "Microsoft.ServiceBus/namespaces",
+     "Microsoft.SignalRService/SignalR",
+     "Microsoft.Sql/servers/databases",
+     "Microsoft.Sql/servers/elasticPools",
+     "Microsoft.StreamAnalytics/streamingjobs",
+     "Microsoft.TimeSeriesInsights/environments",
+     "Microsoft.Network/trafficManagerProfiles",
+     "Microsoft.Compute/virtualMachines",
+     "Microsoft.Compute/virtualMachineScaleSets",
+     "Microsoft.Network/virtualNetworks",
+     "Microsoft.Network/virtualNetworkGateways"
+    ]
+   }
+  },
+  "description": "",
+  "metadata": {
+   "createdBy": "47c4d228-8751-41d9-92e5-c0ed0daf1640",
+   "createdOn": "2019-11-21T14:45:02.1071492Z",
+   "updatedBy": null,
+   "updatedOn": null
+  },
+  "enforcementMode": "Default"
+ },
+ "id": "/subscriptions/a5d987dd-b7cd-48c7-9390-25322651febd/providers/Microsoft.Authorization/policyAssignments/9bc7411aa3ff9f579707650d611c376c1940e0efc488e52680b65200024c12ee",
+ "type": "Microsoft.Authorization/policyAssignments",
+ "name": "9bc7411aa3ff9f579707650d611c376c1940e0efc488e52680b65200024c12ee",
+ "location": "eastus2"
+}
